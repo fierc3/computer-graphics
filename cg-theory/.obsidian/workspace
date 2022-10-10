@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "colors.md",
+            "file": "3. Projektive Geometrie Part 1.md",
             "mode": "source",
             "source": false
           }
@@ -77,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "colors.md",
+                "file": "3. Projektive Geometrie Part 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +94,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "colors.md",
+                "file": "3. Projektive Geometrie Part 1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -117,7 +117,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "colors.md"
+                "file": "3. Projektive Geometrie Part 1.md"
               }
             }
           }
@@ -129,5 +129,13 @@
     "collapsed": true
   },
   "active": "9e4f4abee03943d7",
-  "lastOpenFiles": []
+  "lastOpenFiles": [
+    "2. Vision Science.md",
+    "Zusammenfassung-CG_Willi.pdf",
+    "Pasted image 20221006160509.png",
+    "3. Projektive Geometrie Part 1.md",
+    "colors.md",
+    "1. Einführung.md",
+    "1. X.md"
+  ]
 }
