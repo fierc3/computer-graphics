@@ -15,6 +15,7 @@ class SolidCube
         const color6 = [1.0, 0.0, 1.0];
 
         /*
+        // Method to use one array for both colors and vertices
         var vertices =
         [
             ...A, ...color1, ...D, ...color1, ...C, ...color1, ...B, ...color1,
@@ -36,6 +37,7 @@ class SolidCube
                 ...E, ...F, ...G, ...H
             ];
 
+        // could be shortened by not having to write the color 4x, but for gradient control this approach might be interesting
         var colors =
             [
                 ...color1, ...color1, ...color1, ...color1,
@@ -58,6 +60,7 @@ class SolidCube
         gl.bindBuffer (gl.ARRAY_BUFFER, this.colorBuffer);
         gl.bufferData (gl.ARRAY_BUFFER, new Float32Array (colors), gl.STATIC_DRAW);
 
+        // indices match to the vertices array now ( enabled by separating colors and vertices)
         var indices =
         [
              0,  1,  2,      0,  2,  3,     //  ADCB
@@ -83,14 +86,9 @@ class SolidCube
 
 
         gl.bindBuffer (gl.ARRAY_BUFFER, this.colorBuffer);
-        gl.vertexAttribPointer (ctx.aColorId, 3, gl.FLOAT, false, 0, 0);
+        gl.vertexAttribPointer (ctx.aColorId, 3, gl.FLOAT, false, 0, 0); // using 2 buffers makes stride handling simpler
         gl.enableVertexAttribArray (ctx.aColorId);
 
-        /*
-        gl.bindBuffer (gl.ARRAY_BUFFER, rectangleObject.colorBuffer);
-        gl.vertexAttribPointer (ctx.aColorId, 3, gl.FLOAT, false, 0, 0);
-        gl.enableVertexAttribArray (ctx.aColorId);
-         */
 
         gl.bindBuffer (gl.ELEMENT_ARRAY_BUFFER, this.IndexBuffer);
         gl.drawElements (gl.TRIANGLES, this.NumIndices, gl.UNSIGNED_BYTE, 0);
